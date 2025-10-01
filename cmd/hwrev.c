@@ -64,10 +64,10 @@ int do_hwrev(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 
 	char buffer1[16];
 	char buffer2[16];
-	sprintf(buffer1, "%d", hwrev_adc)
-	sprintf(buffer2, "%d", hwdet_adc)
-	env_set("hwrev_adc", buffer1)
-	env_set("hwdet_adc", buffer2)
+	sprintf(buffer1, "%d", hwrev_adc);
+	sprintf(buffer2, "%d", hwdet_adc);
+	env_set("hwrev_adc", buffer1);
+	env_set("hwdet_adc", buffer2);
 
 	return CMD_RET_SUCCESS;
 }
