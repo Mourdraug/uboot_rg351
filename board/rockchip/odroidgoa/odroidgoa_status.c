@@ -121,7 +121,9 @@ int odroid_display_status(int logo_mode, int logo_storage, const char *str)
 
 	if (lcd_init()) {
 		printf("odroid lcd init fail!\n");
-		odroid_drop_errorlog(sprintf("lcd init fail, check dtb file A: %s B: %s", env_get("hwrev_adc"), env_get("hwdet_adc")), 29);
+		char buffer[512]
+		sprintf(buffer, "lcd init fail, check dtb file A: %s B: %s", env_get("hwrev_adc"), env_get("hwdet_adc"))
+		odroid_drop_errorlog(buffer, 29);
 		odroid_alert_leds();
 		return -1;
 	}

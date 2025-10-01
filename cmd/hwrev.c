@@ -62,8 +62,12 @@ int do_hwrev(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 	printf("adc0 (hw rev) %d\n", hwrev_adc);
 	printf("Model = %s\n",env_get("hwrev"));
 
-	env_set("hwrev_adc", sprintf("%d", hwrev_adc))
-	env_set("hwdet_adc", sprintf("%d", hwdet_adc))
+	char buffer1[16];
+	char buffer2[16];
+	sprintf(buffer1, "%d", hwrev_adc)
+	sprintf(buffer2, "%d", hwdet_adc)
+	env_set("hwrev_adc", buffer1)
+	env_set("hwdet_adc", buffer2)
 
 	return CMD_RET_SUCCESS;
 }
