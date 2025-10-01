@@ -52,7 +52,8 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += \
 	rv1108-evb.dtb \
 	rg351p-uboot.dtb \
 	rg351v-uboot.dtb \
-	rg351mp-uboot.dtb
+	rg351mp-uboot.dtb \
+	rk3326-720-uboot.dtb
 dtb-$(CONFIG_ARCH_MESON) += \
 	meson-gxbb-odroidc2.dtb
 dtb-$(CONFIG_TEGRA) += tegra20-harmony.dtb \
