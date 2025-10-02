@@ -55,9 +55,9 @@ int do_hwrev(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 	}
 	/* Unknown */
 	else {
-		env_set("hwrev", "rg351mp");
-		env_set("dtb_uboot", "rg351mp-uboot.dtb");
-		env_set("dtb_kernel", "rk3326-rg351mp-linux.dtb");
+		env_set("hwrev", "rk3326-720");
+		env_set("dtb_uboot", "rk3326-720-uboot.dtb");
+		env_set("dtb_kernel", "rk3326-720-linux.dtb");
 	}
 	printf("adc0 (hw rev) %d\n", hwrev_adc);
 	printf("Model = %s\n",env_get("hwrev"));

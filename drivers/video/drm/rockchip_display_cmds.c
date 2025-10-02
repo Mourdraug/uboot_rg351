@@ -455,9 +455,7 @@ int lcd_show_logo(void)
 	if (lcd_init()) {
 		printf("%s : lcd init error!\n", __func__);
 #if defined(CONFIG_TARGET_ODROIDGO2)
-		char buffer[512];
-		sprintf(buffer, "lcd init fail, check dtb file A: %s B: %s", env_get("hwrev_adc"), env_get("hwdet_adc"));
-		odroid_drop_errorlog(buffer, 29);
+		odroid_drop_errorlog("lcd init fail, check dtb file", 29);
 		odroid_alert_leds();
 #endif
 		return -1;
